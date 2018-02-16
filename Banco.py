@@ -13,16 +13,16 @@ print("-----Desenvolvido por Geysom.-----")
 
 
 def login(logado=True):
-    nome = str(input("Insira seu nome: "))
+    login_nome = str(input("Insira seu nome: "))
     login_senha = str(input("Insira sua senha: "))
-    while nome != 'teste':
+    while login_nome != "teste":
         print("Nome incorreto")
         exit()
-    while login_senha != 'teste':
+    while login_senha != "teste":
         print("Senha incorreta")
         exit()
         return login
-    print('-----final do login-----')
+    print("-----final do login-----")
 
 
 login(logado=True)
@@ -38,7 +38,7 @@ while True:
           "5.Criptografar\n"
           "6.Descriptografarz\n"
           "99.Sair")
-    entrada = input('>')
+    entrada = input(">")
     if entrada == "1":
         arq = input("Nome do arquivo .txt\n>")
         with open(arq, "a") as dado:
@@ -53,7 +53,7 @@ while True:
         continue
     elif entrada == "3":
         arq = input("Que arquivo deseja ler?\n>")
-        with open(arq, 'r') as dado:
+        with open(arq, "r") as dado:
             conteudo = dado.read()
             print("Conteúdo do arquivo\n>")
             print(conteudo)
@@ -114,10 +114,10 @@ while True:
 
 
         arq = input("Arquivo para criptografar?\n>")
-        with open(arq, 'r') as dado:
+        with open(arq, "r") as dado:
             conteudo = dado.read()
         cifrada = criptografar(conteudo, chave=7)
-        with open(arq, 'w') as dado:
+        with open(arq, "w") as dado:
             conteudo = dado.write("{}\n".format(cifrada))
             dado.close()
             print(cifrada)
@@ -174,12 +174,13 @@ while True:
 
 
         arq = input("Arquivo para descriptografar\n>")
-        with open(arq, 'r') as dado:
+        with open(arq, "r") as dado:
             conteudo = dado.read()
             dado.close()
             decifrar = descriptografar(conteudo, chave=7)
-        with open(arq, 'w') as dado:
+        with open(arq, "w") as dado:
             dado.write(decifrar)
+            print(conteudo)
             continue
     elif entrada == "99":
         sys.exit(0)
