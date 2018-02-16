@@ -8,10 +8,10 @@ print('\033[35m'+'-----Login-----'+'\033[0;0m')
 def login(logar):
     login = str(input( '\033[31m'+'Insira seu nome: '+'\033[0;0m'))
     login_senha = str(input('\033[31m'+'Insira sua senha: '+'\033[0;0m'))
-    while login != "Geysom":
+    while login != "login":
         print("Nome incorreto")
         break
-    while login_senha != "GEYSOMSOUZAsilva2000":
+    while login_senha != "senha":
         print("Senha incorreta")
         exit()
         return login
